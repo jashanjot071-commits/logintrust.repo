@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Login Trust</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/register.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<div class="page-wrap">
+
+  <header class="navbar">
+  <div class="logo-wrap">
+    <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></div>
+    <div>
+      <h1 class="logo-text">Login Trust</h1>
+      <p class="logo-subtext">Advanced Phishing Detection Platform</p>
+    </div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="/" style="color:var(--cyan)">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <div class="brand">
+      <div class="brand-icon">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+      </div>
+      <div>
+        <div class="brand-name">Login Trust</div>
+        <div class="brand-sub">Advanced Phishing Detection Platform</div>
+      </div>
+    </div>
+
+    <h1 class="left-headline">Join the<br><span>security grid.</span></h1>
+    <p class="left-desc">Create a free account and start scanning websites for phishing, malware, and suspicious patterns in seconds.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Create your account</strong>
+          <span>Takes less than 30 seconds, no email required</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Paste any URL</strong>
+          <span>Submit any website link to our scanner</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Get instant results</strong>
+          <span>See risk score, threat indicators, and verdict</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <div class="form-wrap">
+
+      <div class="free-badge">✦ Free Account</div>
+
+      <div class="form-header">
+        <h2>Create account</h2>
+        <p>Start scanning websites for threats today</p>
+      </div>
+
+      {% if error %}
+      <div class="error-msg">⚠️ {{ error }}</div>
+      {% endif %}
+
+      <form method="POST">
+        <div class="input-group">
+          <span class="input-icon">👤</span>
+          <input type="text" name="username" placeholder="Choose a username" required>
+        </div>
+        <p class="hint">3–30 characters, letters, numbers, underscores only</p>
+
+        <div class="input-group">
+          <span class="input-icon">🔒</span>
+          <input type="password" name="password" placeholder="Create a password" required>
+        </div>
+        <p class="hint">Minimum 8 characters</p>
+
+        <button type="submit" class="btn-primary">Create Account →</button>
+      </form>
+
+      <div class="divider">already have an account?</div>
+
+      <div class="auth-links">
+        <a href="/login">Sign in instead</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    navMenu.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>

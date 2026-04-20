@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Trust - Contact</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/contact.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<header class="navbar">
+  <div class="logo-wrap">
+    <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></div>
+    <div><h1 class="logo-text">Login Trust</h1><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="/">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact" style="color:var(--cyan)">Contact</a>
+    <a href="/login" class="nav-cta">Get Started</a>
+  </nav>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/login">Login</a>
+  </nav>
+</header>
+
+<div class="page-content">
+  <div class="page-hero">
+    <div class="section-tag">Contact Us</div>
+    <h1>Get In <span>Touch</span></h1>
+    <p>Have questions about Login Trust or need support? We're here to help you stay protected.</p>
+  </div>
+
+  <section class="contact-section">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="contact-card-icon">📧</span>
+        <h3>Email Support</h3>
+        <p>
+          <a href="mailto:jashanjot071@gmail.com">jashanjot071@gmail.com</a><br><br>
+          <a href="mailto:prabhjotbhullar497@gmail.com">prabhjotbhullar497@gmail.com</a>
+        </p>
+      </div>
+      <div class="contact-card">
+        <span class="contact-card-icon">🕐</span>
+        <h3>Response Time</h3>
+        <p>We typically respond within <strong style="color:var(--text)">24 hours</strong> on business days. For urgent security issues, we prioritize faster turnaround.</p>
+      </div>
+      <div class="contact-card">
+        <span class="contact-card-icon">🛡️</span>
+        <h3>Security Reports</h3>
+        <p>Found a vulnerability or want to report a false positive? Send us a detailed email and we'll investigate promptly.</p>
+      </div>
+    </div>
+
+    <!-- System status -->
+    <div class="status-card">
+      <div class="status-left">
+        <h3>System Status</h3>
+        <p>All Login Trust services are running normally.</p>
+      </div>
+      <div class="status-indicators">
+        <div class="status-item"><div class="status-dot"></div><span>Scanner Online</span></div>
+        <div class="status-item"><div class="status-dot"></div><span>API Operational</span></div>
+        <div class="status-item"><div class="status-dot"></div><span>Auth Active</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-heading">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers to common questions about Login Trust.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Is Login Trust free to use?</h4>
+        <p>Yes — creating an account and running scans is completely free. No credit card required.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What types of URLs can I scan?</h4>
+        <p>Any public http or https URL. We block internal/private IP addresses for security reasons. Paste the full URL including the protocol (https://...).</p>
+      </div>
+      <div class="faq-item">
+        <h4>How accurate is the scanner?</h4>
+        <p>Our scanner uses multiple heuristic checks including URL structure analysis, domain reputation signals, and known phishing patterns to deliver high-confidence verdicts.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is my scan data stored or shared?</h4>
+        <p>We do not sell or share your scan data with third parties. Scans are processed to generate results and are not linked to personal profiles.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo-wrap">
+          <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"></div>
+          <div><h2 class="logo-text">Login Trust</h2><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+        </div>
+        <p class="footer-desc">Protecting users from fake login pages using intelligent threat detection.</p>
+      </div>
+      <div class="footer-col"><h3>Quick Links</h3><a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+      <div class="footer-col"><h3>Features</h3><a href="/about">URL Analysis</a><a href="/about">Threat Detection</a><a href="/about">Live Monitoring</a></div>
+      <div class="footer-col"><h3>Contact</h3><p>jashanjot071@gmail.com</p><p>prabhjotbhullar497@gmail.com</p><p style="margin-top:8px;">Status: System Active 🟢</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Login Trust. All rights reserved.</div>
+  </footer>
+</div>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); navMenu.classList.toggle("open"); });
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Login Trust</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<header class="navbar">
+  <div class="logo-wrap">
+    <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></div>
+    <div>
+      <h1 class="logo-text">Login Trust</h1>
+      <p class="logo-subtext">Advanced Phishing Detection Platform</p>
+    </div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="/" style="color:var(--cyan)">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <div class="brand">
+      <div class="brand-icon">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+      </div>
+      <div>
+        <div class="brand-name">Login Trust</div>
+        <div class="brand-sub">Advanced Phishing Detection Platform</div>
+      </div>
+    </div>
+
+    <h1 class="left-headline">Scan websites.<br><span>Stay protected.</span></h1>
+    <p class="left-desc">LinkTrust analyzes suspicious URLs in real-time, detecting phishing attempts, malicious patterns, and security risks through an intelligent scanning engine.</p>
+
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-text">
+          <strong>Real-Time URL Scanning</strong>
+          <span>Instant threat analysis on any website</span>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚠️</div>
+        <div class="feature-text">
+          <strong>Phishing Detection</strong>
+          <span>Identify fake login pages instantly</span>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-text">
+          <strong>Risk Score Reports</strong>
+          <span>Detailed breakdown of threat indicators</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <div class="form-wrap">
+
+      <div class="status-pill">
+        <div class="status-dot"></div>
+        System Online
+      </div>
+
+      <div class="form-header">
+        <h2>Welcome back</h2>
+        <p>Login to access your scanner dashboard</p>
+      </div>
+
+      {% if error %}
+      <div class="error-msg">⚠️ {{ error }}</div>
+      {% endif %}
+
+      <form method="POST">
+        <div class="input-group">
+          <span class="input-icon">👤</span>
+          <input type="text" name="username" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+          <span class="input-icon">🔒</span>
+          <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn-primary">Login →</button>
+      </form>
+
+      <div class="divider">or</div>
+
+      <div class="auth-links">
+        No account? <a href="/register">Create one free</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    navMenu.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Trust - Scanner</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/scanner.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<header class="navbar">
+  <div class="logo-wrap">
+    <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></div>
+    <div><h1 class="logo-text">Login Trust</h1><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="/">Home</a>
+    <a href="/scanner" style="color:var(--cyan)">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/logout" class="logout-btn"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+  </nav>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a>
+    <a href="/logout" class="logout-btn"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+  </nav>
+</header>
+
+<div class="page-content">
+  <section class="scanner-section">
+    <div class="scanner-header">
+      <div class="section-tag">URL Scanner</div>
+      <h1>Scan Any <span>Login URL</span></h1>
+      <p>Paste a suspicious login URL and let our engine detect phishing threats, malicious patterns, and risk indicators instantly.</p>
+    </div>
+
+    <!-- Input card -->
+    <div class="scanner-input-card">
+      <div class="input-row">
+        <div class="url-input-wrap">
+          <i class="fas fa-link url-input-icon"></i>
+          <input type="text" id="urlInput" placeholder="https://suspicious-login-page.com" autocomplete="off" />
+        </div>
+        <button id="scanBtn" onclick="scanURL()"><i class="fas fa-shield-halved"></i> Scan Now</button>
+      </div>
+      <div class="helper-text">Press <strong>Enter</strong> after typing the URL, or click Scan Now.</div>
+
+      <div class="loading hidden" id="loading">
+        <div class="spinner"></div>
+        <span>Analyzing target URL...</span>
+      </div>
+    </div>
+
+    <!-- Result card -->
+    <div class="result-card hidden" id="resultCard">
+      <div class="result-header">
+        <div>
+          <p class="result-label">Scan Report</p>
+          <h3 id="displayURL">—</h3>
+        </div>
+        <span class="verdict-badge" id="verdictBadge">SAFE</span>
+      </div>
+      <div class="result-grid">
+        <div class="result-box">
+          <p>Risk Score</p>
+          <h4 id="riskScore">0</h4>
+        </div>
+        <div class="result-box">
+          <p>Verdict</p>
+          <h4 id="verdict">Safe</h4>
+        </div>
+      </div>
+      <div class="meter-wrap">
+        <div class="meter-top">
+          <span>Threat Level</span>
+          <span id="meterPercent">0%</span>
+        </div>
+        <div class="meter">
+          <div class="meter-bar" id="meterBar"></div>
+        </div>
+      </div>
+      <div class="issues-wrap">
+        <p class="issues-title">Detected Indicators</p>
+        <ul id="issuesList"><li>No major issues found</li></ul>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="tips-strip">
+      <div class="tip">
+        <div class="tip-icon">🔍</div>
+        <div><h4>Check the domain</h4><p>Look for misspellings or extra characters in the URL domain.</p></div>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">🔒</div>
+        <div><h4>Verify HTTPS</h4><p>Legitimate sites always use secure HTTPS connections.</p></div>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">⚠️</div>
+        <div><h4>Trust your instincts</h4><p>If something feels off about a login page, scan it first.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo-wrap">
+          <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"></div>
+          <div><h2 class="logo-text">Login Trust</h2><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+        </div>
+        <p class="footer-desc">Protecting users from fake login pages using intelligent threat detection.</p>
+      </div>
+      <div class="footer-col"><h3>Quick Links</h3><a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+      <div class="footer-col"><h3>Features</h3><a href="/about">URL Analysis</a><a href="/about">Threat Detection</a><a href="/about">Live Monitoring</a></div>
+      <div class="footer-col"><h3>Contact</h3><p>jashanjot071@gmail.com</p><p>prabhjotbhullar497@gmail.com</p><p style="margin-top:8px;">Status: System Active 🟢</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Login Trust. All rights reserved.</div>
+  </footer>
+</div>
+
+<script src="{{ url_for('static', filename='script/scanner.js') }}"></script>
+</body>
+</html>

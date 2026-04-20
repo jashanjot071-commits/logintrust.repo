@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Trust - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+<div class="bg-glow bg-glow-3" style="position:fixed;border-radius:50%;filter:blur(160px);z-index:0;pointer-events:none;background:radial-gradient(circle, rgba(81,196,255,0.05), transparent 70%);top:40%;left:40%;width:800px;height:800px;transform:translate(-50%,-50%);"></div>
+
+<header class="navbar">
+  <div class="logo-wrap">
+    <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></div>
+    <div>
+      <h1 class="logo-text">Login Trust</h1>
+      <p class="logo-subtext">Advanced Phishing Detection Platform</p>
+    </div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="/" style="color:var(--cyan)">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login" class="nav-cta">Get Started</a>
+  </nav>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+<div class="page-content">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="section-tag">Security Intelligence Platform</div>
+      <h2>Identify Fake Login Pages with <span>Advanced Threat Detection</span></h2>
+      <p>Login Trust analyzes suspicious login URLs in real-time, detecting phishing attempts, malicious patterns, and security risks through an intelligent scanning engine.</p>
+      <div class="hero-actions">
+        <a href="/scanner" class="btn btn-primary"><i class="fas fa-shield-halved"></i> Start Scan</a>
+        <a href="/about" class="btn btn-secondary">Learn More →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="preview-card">
+        <div class="preview-top">
+          <span class="pulse-dot"></span>
+          Real-Time Threat Monitoring
+        </div>
+        <div class="preview-body">
+          <div class="mini-stat">
+            <p>System Security</p>
+            <h3>Fully Protected</h3>
+          </div>
+          <div class="mini-stat">
+            <p>Scan Accuracy</p>
+            <h3>High Precision</h3>
+          </div>
+          <div class="mini-stat">
+            <p>Threat Intelligence</p>
+            <h3>Live Analysis</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">99%</div>
+      <div class="stat-label">Detection Accuracy</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">&lt;5s</div>
+      <div class="stat-label">Average Scan Time</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">System Uptime</div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="features-section">
+    <div class="section-heading">
+      <div class="section-tag">Core Features</div>
+      <h2>Powerful Security Analysis</h2>
+      <p>Everything you need to identify and neutralize phishing threats in seconds.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🔍</div>
+        <h3>Deep URL Analysis</h3>
+        <p>Detect suspicious patterns, redirects, and hidden phishing tricks through comprehensive URL inspection.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">⚡</div>
+        <h3>Instant Results</h3>
+        <p>Get a full risk score and verdict within seconds — no waiting, no delays.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🛡️</div>
+        <h3>Threat Detection</h3>
+        <p>Identify malicious login pages and fake authentication systems before they cause harm.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">📊</div>
+        <h3>Risk Score Reports</h3>
+        <p>Detailed breakdown of all threat indicators with a clear malicious / suspicious / safe verdict.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🔒</div>
+        <h3>Secure by Design</h3>
+        <p>Your scans are private. We never store URLs or share scan data with third parties.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🌐</div>
+        <h3>Any URL, Anywhere</h3>
+        <p>Scan any login page URL globally — works on any device, no extensions required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="section-tag" style="margin:0 auto 16px;">Free to Use</div>
+      <h2>Ready to scan your first URL?</h2>
+      <p>Create a free account and start protecting yourself from phishing threats in under 30 seconds.</p>
+      <div class="cta-btns">
+        <a href="/register" class="btn btn-primary">Create Free Account</a>
+        <a href="/scanner" class="btn btn-secondary">Try Scanner →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"></div>
+          <div><h2 class="logo-text">Login Trust</h2><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+        </div>
+        <p class="footer-desc">Protecting users from fake login pages using intelligent threat detection and real-time URL analysis.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Features</h3>
+        <a href="/about">URL Analysis</a><a href="/about">Threat Detection</a><a href="/about">Live Monitoring</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>jashanjot071@gmail.com</p>
+        <p>prabhjotbhullar497@gmail.com</p>
+        <p style="margin-top:8px;">Status: System Active 🟢</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Login Trust. All rights reserved.</div>
+  </footer>
+</div>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    navMenu.classList.toggle("open");
+  });
+</script>
+</body>
+</html>

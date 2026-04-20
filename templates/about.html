@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Trust - About</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/about.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<header class="navbar">
+  <div class="logo-wrap">
+    <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></div>
+    <div><h1 class="logo-text">Login Trust</h1><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+  </div>
+  <nav class="desktop-nav">
+    <a href="/">Home</a>
+    <a href="/scanner">Scanner</a>
+    <a href="/about" style="color:var(--cyan)">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login" class="nav-cta">Get Started</a>
+  </nav>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/login">Login</a>
+  </nav>
+</header>
+
+<div class="page-content">
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="section-tag">About Platform</div>
+    <h1>What <span>Login Trust</span> Does</h1>
+    <p>A clean, intelligent threat analysis platform for login pages — showing risk scores, verdicts, and suspicious indicators in one place.</p>
+  </div>
+
+  <!-- Cards -->
+  <section class="about-section">
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Fast Analysis</h3>
+        <p>Runs URL scanning quickly and returns a structured, easy-to-read result in seconds with no delays.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <h3>Clear Verdicts</h3>
+        <p>Shows safe, suspicious, or malicious outcomes clearly — no ambiguity, just actionable results.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Professional UI</h3>
+        <p>Built for a modern cybersecurity dashboard feel — clean, intuitive, and designed for clarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="steps-section">
+    <div class="steps-inner">
+      <div class="section-heading">
+        <div class="section-tag">Process</div>
+        <h2>How It Works</h2>
+        <p>Three simple steps to identify threats instantly.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Enter URL</h3>
+          <p>Paste any suspicious login page link into the scanner input. Supports any http/https URL.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Scan</h3>
+          <p>Our system analyzes phishing indicators, URL patterns, redirects, and domain reputation in real-time.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Get Result</h3>
+          <p>View a detailed risk score, threat indicators, and a clear safe / suspicious / malicious verdict instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="about-section">
+    <div class="section-heading" style="text-align:center;margin-bottom:48px;">
+      <div class="section-tag">Core Features</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-0.5px;margin-bottom:10px;">Powerful Security Analysis</h2>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Deep URL Analysis</h3>
+        <p>Detect suspicious patterns, redirects, and hidden phishing tricks through comprehensive inspection.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Instant Results</h3>
+        <p>Get a complete risk score and detailed verdict within seconds of submitting a URL.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Threat Detection</h3>
+        <p>Identify malicious login pages and fake authentication systems before they cause damage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security tips -->
+  <section class="tips-section">
+    <div class="section-heading" style="text-align:center;margin-bottom:48px;">
+      <div class="section-tag">Security Tips</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-0.5px;margin-bottom:10px;">Stay Safe Online</h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-emoji">🔒</div>
+        <div><h3>Check HTTPS</h3><p>Always verify the site uses a secure connection before entering any credentials.</p></div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-emoji">⚠️</div>
+        <div><h3>Avoid Unknown Links</h3><p>Never click suspicious login page links sent via email, SMS, or social media.</p></div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-emoji">🔑</div>
+        <div><h3>Use Strong Passwords</h3><p>Protect every account with a unique, strong password and enable 2FA wherever possible.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo-wrap">
+          <div class="logo-icon"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"></div>
+          <div><h2 class="logo-text">Login Trust</h2><p class="logo-subtext">Advanced Phishing Detection Platform</p></div>
+        </div>
+        <p class="footer-desc">Protecting users from fake login pages using intelligent threat detection.</p>
+      </div>
+      <div class="footer-col"><h3>Quick Links</h3><a href="/">Home</a><a href="/scanner">Scanner</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+      <div class="footer-col"><h3>Features</h3><a href="/about">URL Analysis</a><a href="/about">Threat Detection</a><a href="/about">Live Monitoring</a></div>
+      <div class="footer-col"><h3>Contact</h3><p>jashanjot071@gmail.com</p><p>prabhjotbhullar497@gmail.com</p><p style="margin-top:8px;">Status: System Active 🟢</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Login Trust. All rights reserved.</div>
+  </footer>
+</div>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); navMenu.classList.toggle("open"); });
+</script>
+</body>
+</html>
