@@ -92,6 +92,7 @@ Response:
 ## Authors
 - Jashanjot Singh  
 - Prabhjot Singh
+- Jaspreet Kaur
 
 ## License
 Academic project
