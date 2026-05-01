@@ -223,6 +223,7 @@ def scan():
 
         # ✅ SCORE PARSE (SAFE)
         score = 0
+        reasons = []
         score_match = re.search(r'risk\s*score\s*[:=]?\s*(\d+)', output, re.IGNORECASE)
         if score_match:
             score = int(score_match.group(1))
@@ -231,11 +232,12 @@ def scan():
             score = output.lower().count("risk") + output.lower().count("warning")
 
         # ✅ REASONS
-        reasons = [
-            line.strip()[2:]
-            for line in output.splitlines()
-            if line.strip().startswith("- ")
-        ]
+        if score>0:
+            reasons = [
+                line.strip()[2:]
+                for line in output.splitlines()
+                if line.strip().startswith("- ")
+            ]
 
         # ✅ VERDICT
         if score >= 8:
